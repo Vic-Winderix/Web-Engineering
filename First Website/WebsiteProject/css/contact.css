@@ -1,0 +1,88 @@
+body{
+    background-image: var(--back-image);
+    background-size: cover;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak contact form vak*/
+/*=========================================================================================================================*/
+
+.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 56px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: -12px 12px gray;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak stijl form*/
+/*=========================================================================================================================*/
+
+form p {
+    color: #8d8383;
+}
+
+form input {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: gainsboro;
+    font-weight: bold;
+}
+
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: gainsboro;
+    font-weight: bold;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak buttons*/
+/*=========================================================================================================================*/
+
+.buttons{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0px;
+}
+
+.subbut {
+    background-color: rgb(192, 142, 5);
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    margin-right: 2%;
+}
+
+.subbut:hover {
+    background-color: #4a4545;
+    color: white;
+}
+
+:root{
+    --back-color:white;
+    --back-image:url("/WebsiteProject/picture/9XU51Q.png");
+}
+
+.darkmode{
+    --back-color:#000000;
+    --back-image:url("/WebsiteProject/picture/Afbeelding6.png");
+}

@@ -1,0 +1,292 @@
+/*=========================================================================================================================*/
+/*Opmaak body*/
+/*=========================================================================================================================*/
+body {
+    background-image: var(--back-image);
+    background-size: cover;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak row*/
+/*=========================================================================================================================*/
+
+/*Uitleg Animaties*/
+.row{
+    display: flex;
+    flex-direction: column;
+    background-color: #4f4d4d;
+    box-shadow: 0px 12px black;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.row img{
+    width: 70%;
+    margin: auto;
+}
+
+.uitleg{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 2%;
+    background-color: #4f4d4d;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 12px black;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.uitleg p{
+    padding: 3%;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+/*Uitleg stap 1*/
+.row1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container1-color);
+    box-shadow: -12px 12px var(--shadow1-color);
+    border-radius: 20px;
+    padding: 5%;
+    padding-bottom: 3%;
+}
+
+.uitleg1 p{
+    padding: 2%;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Aldrich;
+    text-align: center;
+}
+.uitleg1 h2{
+    padding: 2%;
+    padding-bottom: 0%;
+}
+
+.uitleg1{
+    background-color: white;
+    box-shadow: -12px 12px black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Uitleg stap 2*/
+.row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container2-color);
+    box-shadow: 12px 12px var(--shadow2-color);
+    border-radius: 20px;
+    padding: 5%;
+    padding-bottom: 3%;
+    margin-top: 5%;
+}
+
+.uitleg2 p{
+    padding: 2%;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Aldrich;
+    text-align: center;
+}
+.uitleg2 h2{
+    padding: 2%;
+    padding-bottom: 0%;
+}
+
+.uitleg2{
+    background-color: white;
+    box-shadow: 12px 12px black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak stappen pictures and clip*/
+/*=========================================================================================================================*/
+.picSteps{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 0% 10% 10%;
+    background-color: var(--container1-color);
+    padding: 5%;
+    padding-bottom: 0%;
+    box-shadow: -12px 12px var(--shadow1-color);
+    margin: auto;
+}
+
+.picSteps2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 0% 10% 10%;
+    background-color: var(--container2-color);
+    padding: 5%;
+    padding-bottom: 0%;
+    box-shadow: 12px 12px var(--shadow2-color);
+    margin: auto;
+}
+
+.animationImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2%;
+    width: 90%;
+    box-shadow: -12px 12px black;
+}
+
+.animationImg2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2%;
+    width: 90%;
+    box-shadow: 12px 12px black;
+}
+.animationImg img{
+    width: 45%;
+    padding: 2%;
+}
+
+.animationClip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2%;
+    width: 90%;
+    margin-top:2%;
+    box-shadow: -12px 12px black;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.animationClip2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2%;
+    width: 90%;
+    margin-top:2%;
+    box-shadow: 12px 12px black;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.animationClip video{
+    width: 80%;
+    padding:4%;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak slide buttons*/
+/*=========================================================================================================================*/
+.fadebutdown1{
+    background-color: transparent;
+    width: 10%;
+    height: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.fadebutup1{
+    background-color: transparent;
+    width: 10%;
+    height: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.fadeimg{
+    width: 100%;
+}
+
+.fadebutdown2{
+    background-color: transparent;
+    width: 10%;
+    height: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.fadebutup2{
+    background-color: transparent;
+    width: 10%;
+    height: 10%;
+    border: none;
+    cursor: pointer;
+}
+/*=========================================================================================================================*/
+/*Opmaak link*/
+/*=========================================================================================================================*/
+a{
+    display:contents;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak footer*/
+/*=========================================================================================================================*/
+.foot{
+    margin-top: 5%;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak themeswitcher*/
+/*=========================================================================================================================*/
+/*Onderdeel van code uit switchtheme.js door Kevin Powell - https://www.youtube.com/watch?v=wodWDIdV9BY*/
+/*Kleurenpalet door mezelf gedaan*/
+:root {
+    --container1-color: rgb(0, 110, 255);
+    --container2-color: rgb(144, 193, 38);
+
+    --shadow1-color:rgb(1, 23, 61);
+    --shadow2-color:rgb(3, 87, 4);
+
+    --back-image: url("/WebsiteProject/picture/BackgroundIma.png");
+}
+
+.darkmode {
+    --container1-color: rgb(151, 17, 17);
+    --container2-color: rgb(206, 149, 43);
+
+    --shadow2-color:rgb(148, 99, 1);
+    --shadow1-color:rgb(111, 4, 4);
+
+    --back-image: url("/WebsiteProject/picture/Afbeelding6.png");
+}

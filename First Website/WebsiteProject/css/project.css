@@ -1,0 +1,228 @@
+/*=========================================================================================================================*/
+/*Opmaak body*/
+/*=========================================================================================================================*/
+body{
+    background-image:var(--back-image);
+    background-size:cover;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak rijen met stappen*/
+/*=========================================================================================================================*/
+.row{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    background-color: transparent;
+}
+
+.rowlogo{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak van het logo*/
+/*=========================================================================================================================*/
+.mainimage{
+    background-color: #4f4d4d;
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 12px black;
+}
+
+.blacklogo{
+    width: 90%;
+}
+
+.uitlegproject{
+    background-color: #4f4d4d;
+    width: 80%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    font-size: xx-large;
+    text-align: center;
+    box-shadow: 0px 12px black;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak van video's*/
+/*=========================================================================================================================*/
+.runvid {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+/*Opmaak uitleg 1 - running*/
+.vidcontainer1 {
+    width: 35%;
+    height: auto;
+    border-radius: 40px;
+    background-color: var(--container1-color);
+    padding: 2%;
+    float: left;
+    justify-content: center;
+    box-shadow: -12px 12px var(--shadow1-color);
+}
+
+.contentcontainer1{
+    width:45%;
+    padding: 4%;
+    padding-left: 1%;
+    height: auto;
+    float: left;
+    background-color: var(--container1-color);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: -12px 12px var(--shadow1-color);
+}
+
+/*Opmaak uitleg 2 - enemy*/
+.vidcontainer2 {
+    width: 35%;
+    height: auto;
+    border-radius: 40px;
+    background-color: var(--container2-color);
+    padding: 2%;
+    float: right;
+    justify-content: center;
+    box-shadow: 12px 12px var(--shadow2-color);
+
+}
+
+.contentcontainer2{
+    width:45%;
+    padding: 4%;
+    padding-right: 1%;
+    height: auto;
+    float: right;
+    background-color: var(--container2-color);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 12px 12px var(--shadow2-color);
+    z-index: +1;
+}
+
+/*Opmaak uitleg 3 - attack*/
+.vidcontainer3 {
+    width: 35%;
+    height: auto;
+    border-radius: 40px;
+    background-color: var(--container3-color);
+    padding: 2%;
+    float: left;
+    justify-content: center;
+    box-shadow: -12px 12px var(--shadow3-color);
+
+}
+
+.contentcontainer3{
+    width:45%;
+    padding: 4%;
+    padding-left: 1%;
+    height: auto;
+    float: left;
+    background-color: var(--container3-color);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: -12px 12px var(--shadow3-color);
+}
+
+/*Opmaak uitleg 4 - map*/
+
+.piccontainer {
+    width: 35%;
+    height: auto;
+    border-radius: 40px;
+    background-color: var(--container4-color);
+    padding: 2%;
+    float: right;
+    justify-content: center;
+    box-shadow: 12px 12px var(--shadow4-color);
+    z-index: -1;
+}
+
+.contentcontainer4{
+    width:45%;
+    padding: 4%;
+    padding-right: 1%;
+    height: auto;
+    float: right;
+    background-color: var(--container4-color);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 12px 12px var(--shadow4-color);
+}
+
+.slides{
+    width: 100%;
+    border-radius: 30px;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak tekst*/
+/*=========================================================================================================================*/
+p {
+    width: 100%;
+    font-family: Aldrich;
+    font-size:x-large;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak link*/
+/*=========================================================================================================================*/
+a{
+    display:contents;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak themeswitcher*/
+/*=========================================================================================================================*/
+/*Onderdeel van code uit switchtheme.js door Kevin Powell - https://www.youtube.com/watch?v=wodWDIdV9BY*/
+/*Kleurenpalet door mezelf gedaan*/
+:root {
+    --container1-color: rgb(0, 110, 255);
+    --container2-color: rgb(144, 193, 38);
+    --container3-color: orange;
+    --container4-color: rgb(225, 22, 22);
+
+    --shadow1-color:rgb(1, 23, 61);
+    --shadow2-color:rgb(3, 87, 4);
+    --shadow3-color:rgb(148, 99, 1);
+    --shadow4-color:rgb(111, 4, 4);
+
+    --imgback-color: rgba(0, 0, 0, 0.471);
+    --back-image:url("/WebsiteProject/picture/BackgroundIma.png");
+}
+
+.darkmode {
+    --container1-color: rgb(151, 17, 17);
+    --container2-color: rgb(206, 149, 43);
+    --container3-color: rgb(87, 128, 0);
+    --container4-color: rgb(7, 7, 185);
+
+    --shadow4-color:rgb(1, 23, 61);
+    --shadow3-color:rgb(3, 87, 4);
+    --shadow2-color:rgb(148, 99, 1);
+    --shadow1-color:rgb(111, 4, 4);
+
+    --imgback-color: rgb(208, 186, 128);
+    --back-image:url("/WebsiteProject/picture/Afbeelding6.png");
+}

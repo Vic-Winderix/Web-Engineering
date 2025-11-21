@@ -1,0 +1,192 @@
+/*=========================================================================================================================*/
+/*Opmaak body*/
+/*=========================================================================================================================*/
+body {
+    background-image: var(--back-image);
+    background-size: cover;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak code*/
+/*=========================================================================================================================*/
+.codeMain{
+    background-color: gray;
+    color: white;
+    padding: 2%;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: -12px 12px black;
+}
+
+.codeEnemy{
+    background-color: gray;
+    color: white;
+    padding: 2%;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 12px 12px black;
+}
+
+.codeHealth{
+    background-color: gray;
+    color: white;
+    padding: 2%;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: -12px 12px black;
+}
+
+
+/*=========================================================================================================================*/
+/*Opmaak row*/
+/*=========================================================================================================================*/
+
+/*Uitleg Godot*/
+.row{
+    display: flex;
+    flex-direction: column;
+    background-color: #4f4d4d;
+    box-shadow: 0px 12px black;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.row img{
+    width: 70%;
+    margin: auto;
+}
+
+.uitleg{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 2%;
+    background-color: #4f4d4d;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 12px black;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.uitleg p{
+    padding: 3%;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
+
+/*Uitleg stap 1*/
+.row1{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container1-color);
+    box-shadow: -12px 12px var(--shadow1-color);
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.uitleg1{
+    flex-direction: column;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -12px 12px black;
+    margin-right: 3%;
+}
+
+.uitleg1 p{
+    padding: 2%;
+}
+
+/*Uitleg stap 2*/
+.row2{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container2-color);
+    box-shadow: 12px 12px var(--shadow2-color);
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.uitleg2{
+    flex-direction: column;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 12px 12px black;
+    margin-right: 3%;
+}
+
+.uitleg2 p{
+    padding: 2%;
+}
+
+/*Uitleg stap 3*/
+.row3{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container3-color);
+    box-shadow: -12px 12px var(--shadow3-color);
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.uitleg3{
+    flex-direction: column;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -12px 12px black;
+    margin-right: 3%;
+}
+
+.uitleg3 p{
+    padding: 2%;
+}
+
+/*Opmaak tekst*/
+p {
+    width: 100%;
+    font-family: Aldrich;
+    font-size:large;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak themeswitcher*/
+/*=========================================================================================================================*/
+/*Onderdeel van code uit switchtheme.js door Kevin Powell - https://www.youtube.com/watch?v=wodWDIdV9BY*/
+/*Kleurenpalet door mezelf gedaan*/
+:root {
+    --container1-color: rgb(0, 110, 255);
+    --container2-color: rgb(144, 193, 38);
+    --container3-color: orange;
+
+    --shadow1-color:rgb(1, 23, 61);
+    --shadow2-color:rgb(3, 87, 4);
+    --shadow3-color:rgb(148, 99, 1);
+
+    --back-image: url("/WebsiteProject/picture/BackgroundIma.png");
+}
+
+.darkmode {
+    --container1-color: rgb(151, 17, 17);
+    --container2-color: rgb(206, 149, 43);
+    --container3-color: rgb(87, 128, 0);
+
+    --shadow4-color:rgb(1, 23, 61);
+    --shadow3-color:rgb(3, 87, 4);
+    --shadow2-color:rgb(148, 99, 1);
+
+    --back-image: url("/WebsiteProject/picture/Afbeelding6.png");
+}

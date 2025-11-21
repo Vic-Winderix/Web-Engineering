@@ -1,0 +1,219 @@
+/*=========================================================================================================================*/
+/*Body opmaak*/
+/*=========================================================================================================================*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*=========================================================================================================================*/
+/*Text en titels ompaak*/
+/*=========================================================================================================================*/
+
+h2 {
+    font-weight: 800;
+    font-size: xx-large;
+    color: #4a4545;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #8d8383;
+    font-weight: 200;
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak wrapper*/
+/*=========================================================================================================================*/
+.wrapper {
+    min-width: 500px;
+    max-width: 1200px;
+    margin: 0px auto 0px auto;
+    position: relative;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak header*/
+/*=========================================================================================================================*/
+header {
+    padding: 30px;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak navigatie*/
+/*=========================================================================================================================*/
+nav {
+    padding: 30px;
+    background-color: transparent;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav li {
+    float: left;
+    width: 150px;
+    background-color: var(--navli-color);
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+nav ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*Menu elementen opmaak*/
+nav a {
+    display: block;
+    color: white;
+    /*Witte tekst*/
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    font-family: Aldrich;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+/*Active menu button opmaak*/
+.active {
+    background-color: var(--active-color);
+    border-radius: 10px;
+    transform: scale(1.13);
+}
+
+.active2 {
+    background-color: var(--active-color2);
+    border-radius: 10px;
+    transform: scale(1.13);
+}
+
+/* Hover effect menubalk*/
+nav a:hover:not(.active) {
+    background-color: #CCC;
+    color: black;
+    border-radius: 10px;
+    transform: scale(1.13);
+}
+
+/*Hiden van submenu*/
+nav li ul {
+    position: absolute;
+    width: 150px;
+    display: none;
+}
+
+nav li li {
+    background-color: white;
+    border-right: none;
+}
+
+/*Bovenhalen submenu*/
+nav li:hover ul {
+    display: block;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak button themeswitch*/
+/*=========================================================================================================================*/
+.switch-background {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.themes {
+    max-width: 90%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.darkmodebutton{
+    position:absolute;
+    width: 55px;
+    height: auto;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak content*/
+/*=========================================================================================================================*/
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak footer*/
+/*=========================================================================================================================*/
+/*Opmaak copyright*/
+.copyright {
+    color: var(--footer-color);
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.foot{
+    background-color: #4f4d4d;
+    border-radius: 50px 50px 50px 50px;
+    margin-bottom: 5%;
+    box-shadow: 0px 12px black;
+
+}
+
+.foot p{
+    color: white;
+    font-size: large;
+    font-family: Aldrich;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak themeswitcher*/
+/*=========================================================================================================================*/
+/*Onderdeel van code uit switchtheme.js door Kevin Powell - https://www.youtube.com/watch?v=wodWDIdV9BY*/
+/*Kleurenpalet door mezelf gedaan*/
+:root{
+    --navli-color:rgb(192, 142, 5);
+    --active-color:#333;
+    --active-color2:#989696;
+}
+
+.darkmode{
+    --navli-color:#333;
+    --active-color:rgb(192, 142, 5);
+    --active-color2:rgb(225, 180, 59);
+}

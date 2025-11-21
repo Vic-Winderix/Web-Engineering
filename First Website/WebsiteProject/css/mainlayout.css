@@ -1,0 +1,60 @@
+/*=========================================================================================================================*/
+/*Body opmaak*/
+/*=========================================================================================================================*/
+body {
+    overflow-x: hidden;
+    background-image:var(--back-image);
+    background-size:cover;
+}
+
+.wrapper img {
+    display: block;
+    width: 90%;
+}
+
+.mainimage{
+    background-color: var(--imgback-color);
+    height: 430px;
+    background-image: var(--pic-logo);
+    background-size: 81%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak footer*/
+/*=========================================================================================================================*/
+.foot{
+    background-color: var(--footer-backcolor);
+    border-radius: 50px 50px 50px 50px;
+}
+
+/*=========================================================================================================================*/
+/*Opmaak themeswitcher*/
+/*=========================================================================================================================*/
+/*Onderdeel van code uit switchtheme.js door Kevin Powell - https://www.youtube.com/watch?v=wodWDIdV9BY*/
+/*Kleurenpalet door mezelf gedaan*/
+:root{
+    --back-image:url("/WebsiteProject/picture/9XU51Q.png");
+    --imgback-color: rgba(0, 0, 0, 0.471);
+
+    --footer-color:white;
+    --footer-backcolor:rgba(0, 0, 0, 0.471);
+
+    --pic-logo:url("/WebsiteProject/picture/ethernal-depths-high-resolution-logo-white-transparent.png");
+}
+
+.darkmode{
+    --back-image:url("/WebsiteProject/picture/Afbeelding6.png");
+    --imgback-color: rgba(255, 255, 255, 0.494);
+
+    --footer-color:black;
+    --footer-backcolor:rgba(255, 255, 255, 0.494);
+
+    --pic-logo:url("/WebsiteProject/picture/ethernal-depths-high-resolution-logo-black-transparent.png");
+
+}
