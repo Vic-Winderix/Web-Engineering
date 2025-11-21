@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ethernal Depths</title>
+	<link href="/WebsiteProject/css/reset.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/general.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/game.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a>
+				<li><a href="project.html">Project</a>
+					<ul>
+						<li><a href="Code.html">Code</a></li>
+						<li><a href="Assets.html">Assets</a></li>
+					</ul>
+				</li>
+				<li><a href="game.html" class="active">Game</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="switch-background">
+				<button id="dark-mode-toggle" class="darkmodebutton"><img id="icontheme" class="themes"
+						src="/WebsiteProject/picture/moon.png" alt="switch between themes button"></button>
+			</div>
+		</nav>
+
+		<div class="gameopmaak"><iframe class="game"
+				src="https://127.0.0.1:8000/WebsiteProject/htmlexport/Game%202d%20Topview.html" title="GAME"></iframe>
+		</div>
+		<div class="content row">
+			<div class="leftcolumn">
+				<h2>Controls</h2>
+				<div class="controlscontainer">
+					<div class="arrows">
+						<div class="rowkeys">
+							<div class="arrow esc" id="esc">
+								<p class="controltext">Esc</p>
+							</div>
+							<div class="arrow inv" id="inv">
+								<p class="controltext">i</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="arrow" id="up"><img class="arrowicon"
+									src="/WebsiteProject/picture/up-arrow.png" alt="arrow up">
+							</div>
+						</div>
+						<div class="row">
+							<div class="arrow" id="left"><img class="arrowicon"
+									src="/WebsiteProject/picture/left-arrow.png" alt="arrow left"></div>
+							<div class="arrow" id="down"><img class="arrowicon"
+									src="/WebsiteProject/picture/down-arrow.png" alt="arrow down"></div>
+							<div class="arrow" id="right"><img class="arrowicon"
+									src="/WebsiteProject/picture/right-arrow.png" alt="arrow right"></div>
+						</div>
+						<div class="row">
+							<div class="space" id="space">
+								<p class="controltext">Space</p>
+							</div>
+						</div>
+					</div>
+					<div class="controlsexplained">
+						<p>Kies knop...</p>
+					</div>
+				</div>
+			</div>
+			<div class="rightcolumn">
+				<div class="downloadbutton">
+					<a href="#" download="/WebsiteProject/GameExe/Game 2d Topview.exe" class="downloadbutback"><img
+								class="downloadicon"
+								src="/WebsiteProject/picture/download-to-storage-drive.png" alt="downloadbutton"></a>
+				</div>
+				<div class="downloaduitleg">
+					<h1 class="downloadtext">Download onze game hier!</h1>
+				</div>
+			</div>
+		</div>
+		<footer class="foot">
+			<p class="copyright">Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele
+				bachelor elektronica-ict - 2024</p>
+		</footer>
+	</div>
+	<script src="/WebsiteProject/java/switchtheme.js"></script>
+	<script src="/WebsiteProject/java/game.js"></script>
+</body>
+
+</html>

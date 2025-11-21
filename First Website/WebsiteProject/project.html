@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Onze 2D-game</title>
+	<link href="/WebsiteProject/css/reset.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/general.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/project.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a>
+				<li><a href="project.html" class="active">Project</a>
+					<ul>
+						<li><a href="Code.html">Code</a></li>
+						<li><a href="Assets.html">Assets</a></li>
+					</ul>
+				</li>
+				<li><a href="game.html">Game</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="switch-background">
+				<button id="dark-mode-toggle" class="darkmodebutton"><img id="icontheme" class="themes"
+						src="/WebsiteProject/picture/moon.png" alt="switch between themes button"></button>
+			</div>
+		</nav>
+		<div class="column">
+			<div class="rowlogo">
+				<div class="mainimage"><img class="blacklogo"
+						src="/WebsiteProject/picture/ethernal-depths-high-resolution-logo-white-transparent.png" alt="Logo ethernal Depths"></div>
+				<p class="uitlegproject">Ik ben Vic Winderix en samen met Keith Cnops en Julien Stuckens stel ik graag het project voor dat we voor Practice Enterprice fase 1 hebben gemaakt. Ons project bestaat uit een 2D game die vanuit het bovenaanzicht gespeeld
+					wordt. Hierbij is het doel om een dungeon te verkennen en onze enemies te verslaan. Hieronder ziet u
+					de stappen die we ondernomen hebben om tot ons resultaat te bekomen. Neem ook zeker eens een kijkje
+					bij onze achterliggende code en de assets die we gebruikt hebben!</p>
+			</div>
+			<div class="row">
+				<div class="vidcontainer1">
+					<video class="runvid" id="video1" src="/WebsiteProject/video/run.mp4"></video>
+				</div>
+
+				<div class="contentcontainer1">
+					<p>De eerste stap van onze game was het maken van ons controleerbaar karakter.
+						Hierbij moesten we animaties toevoegen, in combinatie met de controls. We gebruiken de
+						pijltjestoetsen om ons karakter te bewegen. Door het bovenaanzicht in onze game
+						is er geen sprong nodig. Klik <a href="/WebsiteProject/Code.html">hier</a> om meer te
+						weten te komen over onze code.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="contentcontainer2">
+					<p class="enemyuitleg">De tweede stap was het toevoegen van een enemy. Als de speler binnen een
+						bepaalde
+						range komt zal de enemy deze detecteren en volgen. Het uiteindelijke doel is om een combat
+						system te
+						maken waarbij de speler en de enemy damage kunnen krijgen. Klik <a
+							href="/WebsiteProject/Code.html">hier</a> om meer te weten te komen over onze code.
+					</p>
+				</div>
+
+				<div class="vidcontainer2">
+					<video class="runvid" id="video2" src="/WebsiteProject/video/enemy.mp4"></video>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="vidcontainer3">
+					<video class="runvid" id="video3" src="/WebsiteProject/video/attack.mp4"></video>
+				</div>
+
+				<div class="contentcontainer3">
+					<p>Bij de derde stap hebben een health systeem toegevoegd. Hierbij kan de enemy schade brengen aan
+						de speler, de healthbar zal stil aan afnemen. Bovendien kan de speler, met behulp van de
+						spatiebalk, de tegenaanval inzetten tot de enemy sterft. Klik <a
+							href="/WebsiteProject/Code.html">hier</a> om meer te weten te komen over onze code.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="contentcontainer4">
+					<p>Bij de vierde stap hebben we onze maps gemaakt. Voor deze maps hebben we verschillende assets
+						gebruikt die we samen tot een mooi geheel hebben gevormd. Door gebruik te maken van
+						verschillende layers en collision shapes hebben we een realistische omgeving kunnen creëren voor
+						onze karakters. Bij deze assets horen ook onze karakters zoals ons hoofdkarakter, npc's en
+						enemies. Klik <a href="/WebsiteProject/Assets.html">hier</a> om meer te weten te komen over de
+						assets die we gebruikt hebben.</p>
+				</div>
+				<div class="piccontainer">
+					<img class="slides" src="/WebsiteProject/picture/AfbeeldingProject.png" alt="Afbeelding1 slideshow">
+					<img class="slides" src="/WebsiteProject/picture/AfbeeldingHouse.png" alt="Afbeelding2 slideshow">
+					<img class="slides" src="/WebsiteProject/picture/Dungeon.png" alt="Afbeelding3 slideshow">
+				</div>
+			</div>
+		</div>
+		<footer class="foot">
+			<p class="copyright">Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele
+				bachelor elektronica-ict - 2024</p>
+		</footer>
+	</div>
+	<script src="/WebsiteProject/java/switchtheme.js"></script>
+	<script src="/WebsiteProject/java/project.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ethernal Depths</title>
+	<link href="/WebsiteProject/css/reset.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/general.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/code.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a>
+				<li><a href="project.html" class="active">Project</a>
+					<ul>
+						<li><a href="Code.html" class="active2">Code</a></li>
+						<li><a href="Assets.html">Assets</a></li>
+					</ul>
+				</li>
+				<li><a href="game.html">Game</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="switch-background">
+				<button id="dark-mode-toggle" class="darkmodebutton"><img id="icontheme" class="themes"
+						src="/WebsiteProject/picture/moon.png" alt="switch between themes button"></button>
+			</div>
+		</nav>
+		<div class="contentrow">
+			<div class="leftcolumn">
+				<div class="card">
+					<div class="row">
+						<img src="/WebsiteProject/picture/logo_dark.svg" alt="Dark logo">
+					</div>
+					<div class="uitleg"><p>Voor onze game hebben we godot gebruikt. Deze game-engine is super handig om zowel de visuele aspecten, bv animaties en assets, als de achterliggende code tot één geheel te brengen. Godot maakt gebruik van een eigen script met een uitgebreide library die vele functies bevat.</p></div>
+					<div class="row1">
+						<div class="uitleg1">
+							<h2>Code hoofdkarakter</h2>
+							<p>Bij onze eerste stap moesten wij onze main character in beweging krijgen. We hebben een
+								2D-game, dus we kunnen ons bewegen over een x en een y-as. Wij kozen om onze
+								pijltjestoetsen te gebruiken om ons karakter te bewegen. We kijken dus in onze code of
+								de toets is ingedrukt. Indien dit het geval is zal het karakter bewegen.</p>
+							<p>Aangezien het karakter ook naar links kan lopen willen we het karakter omdraaien. Dit
+								kunnen we simpel doen door de flip_h (flip horizontaal) aan te zetten indien de
+								looprichting van het karakter negatief of dus naar links is.</p>
+							<p>Vervolgens willen we onze fysieke aspecten doen kloppen. Hierbij moeten we dus rekening
+								houden met de richting en de snelheid. Door deze met elkaar te vermenigvuldigen krijgen
+								je de juiste versnelling en vertraging.</p>
+							<p>We eindigen onze code met animaties waarbij we een run animatie spelen als de speler in
+								beweging is een een idle animatie als de speler in rust staat. Hierdoor krijgen we een
+								dynamisch effect in onze game.</p>
+						</div>
+						<pre class="codeMain">
+func process_player_movement(delta):
+
+#Links-rechts over x-as
+var direction = Input.get_axis("ui_left", "ui_right")
+if direction == -1:
+	get_node("Main character").flip_h = true
+else:
+	get_node("Main character").flip_h = false
+	
+if direction:
+	velocity.x = direction * SPEED
+else:
+	velocity.x = move_toward(velocity.x, 0, SPEED)
+
+#Omhoog-omlaag over x-as
+var direction2 = Input.get_axis("ui_up", "ui_down")
+if direction2:
+	velocity.y = direction2 * SPEED
+else:
+	velocity.y = move_toward(velocity.y, 0, SPEED)
+
+#animaties
+if direction or direction2:
+	maincharacter.play("Run")
+else:
+	maincharacter.play("Idle")
+move_and_slide()
+					</pre>
+					</div>
+					<div class="row2">
+						<div class="uitleg2">
+							<h2>Code enemy</h2>
+							<p>Voor onze tweede stap hebben we een enemy gemaakt. Wij hebben ongeveer dezelfde code
+								gebruikt, het enige verschil is het feit dat onze enemy geen controls nodig heeft.</p>
+							<p>Om dit op te lossen hebben we gebruik gemaakt van een detection area. Deze area bevind
+								zich rond de enemy en als er een speler gedetecteerd wordt in deze area zal de enemy in
+								gang schieten. De variabele "player_chase" zal op true komen te staan en de positie van
+								de enemy zal overeen moeten komen met die van de speler. Hierdoor zal de speler
+								achtervolgt worden tot deze buiten de detection area komt en de variabele op false komt
+								te staan.</p>
+						</div>
+						<pre class="codeEnemy">
+func _physics_process(delta):
+
+if player_chase:
+	#Positie van enemie moet gelijk zijn aan de positie van de speler
+	speed = 130
+	position += (player.position - position)/speed
+	if(player.position.x - position.x)&lt;0:
+		get_node("Demon-animation").flip_h = true
+	else:
+		get_node("Demon-animation").flip_h = false
+					</pre>
+					</div>
+					<div class="row3">
+						<div class="uitleg3">
+							<h2>Code health systeem</h2>
+							<p>Tot slot hebben we een simpel systeem gemaakt waarbij onze speler en enemy damage kunnen
+								krijgen en sterven. Hiervoor hebben we een nieuwe detectionarea gemaakt bij de enemy en
+								de player. Als de enemy in de detection area terechtkomt zal de health van de speler
+								afnemen. Om te vermijden dat onze health te snel afneemt hebben we een timer van 2
+								seconden toegevoegt.</p>
+							<p>Bij de enemy maken we gebruik van hetzelfde systeem. Het enige verschil is een butten, in
+								ons geval de spatiebalk, die moet ingedrukt worden alvorens de speler scahde kan
+								aanrichten</p>
+							<p>De hoeveelheid health van de speler en enemy wordt steeds in de gaten gehouden, indien
+								deze nul is zal de death animation spelen en zal de speler/enemy verwijderd worden van
+								de map. Als de speler sterft komt een game over screen op het beeld</p>
+							<p>We hebben tot slot nog een puntensysteem ingevoert. Per enemy dat je kan doden zullen er
+								10 punten worden toegevoegt aan de score.</p>
+						</div>
+						<pre class="codeHealth">
+===============================
+player
+===============================
+func enemy_attack():
+if enemy_inattack_range and enemy_attack_cooldown == true:
+	currentHealth = currentHealth - 10
+	enemy_attack_cooldown = false
+	$attacked_cooldown.start()
+	print(currentHealth)
+	healthChanged.emit()
+	scoreChanged.emit()
+elif currentHealth &lt;= 0:
+	player_alive = false
+
+===============================
+enemy
+===============================
+func deal_with_damage():
+if player_inattack_range and Global.player_current_attack == true:
+	health = health - 20
+	await get_tree().create_timer(2).timeout
+
+	if health &lt;= 0:
+		health = 0
+		Demon.play("Death")
+		await get_tree().create_timer(2).timeout
+		self.queue_free()
+		playerpointer.updateScore()
+				</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="foot">
+			<p class="copyright">Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele
+				bachelor elektronica-ict - 2024</p>
+		</footer>
+	</div>
+	<script src="/WebsiteProject/java/switchtheme.js"></script>
+</body>
+
+</html>

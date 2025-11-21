@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ethernal Depths</title>
+	<link href="/WebsiteProject/css/reset.css" rel="stylesheet" />
+	<link id="thememain" href="/WebsiteProject/css/general.css" rel="stylesheet" />
+	<link href="/WebsiteProject/css/assets.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a>
+				<li><a href="project.html" class="active">Project</a>
+					<ul>
+						<li><a href="Code.html">Code</a></li>
+						<li><a href="Assets.html" class="active2">Assets</a></li>
+					</ul>
+				</li>
+				<li><a href="game.html">Game</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="switch-background">
+				<button id="dark-mode-toggle" class="darkmodebutton"><img id="icontheme" class="themes"
+						src="/WebsiteProject/picture/moon.png" alt="switch between themes button"></button>
+			</div>
+		</nav>
+		<div class="contentrow">
+			<div class="leftcolumn">
+				<div class="card">
+					<div class="row">
+						<img src="/WebsiteProject/picture/logo-itsio.svg" alt="Logo Itchio">
+					</div>
+					<div class="uitleg">
+						<p>Voor onze assets hebben we gebruik gemaakt van itch.io, een website waar vele creators hun
+							assetpacks delen en verkopen. Wij hebben gekozen voor de gratis assets van analogStudios_.
+							deze developer heeft een mooi samenhangend geheel gemaakt waarbij karakters, items en maps
+							horen. Om meer te weten te komen over analogStudios_ kan je op <a
+								href="https://analogstudios.itch.io/">deze</a> link klikken.</p>
+					</div>
+					<div class="row1">
+						<div class="uitleg1">
+							<h2>Animaties</h2>
+							<p>We zijn begonnen bij het maken van onze animaties. We wouden verschillende animaties
+								gebruiken voor ons karakter, bv lopen, sterven, stil staan, om zo onze game dynamischer
+								te maken. Voor de animaties gebruiken we een gewone afbeelding waarom ons karakter in
+								verschillende poses achter elkaar staat. Door deze afbeelding vervolgens in frames op te
+								delen en achter elkaar af te spelen kunnen we het personage tot leven wekken. De tools
+								die Godot ons aanrijkt zijn zeer handig om dit te doen. Door te spelen met de snelheid
+								van de frames kan je je animaties aanpassen zodat deze in je game past.</p>
+
+						</div>
+						<button class="fadebutdown1"><img src="/WebsiteProject/picture/down-menu.png" class="fadeimg"
+								alt="arrow dropdown"></button>
+					</div>
+					<div class="picSteps">
+						<div class="animationImg">
+							<img src="/WebsiteProject/picture/animation1.png" alt="Afbeelding stap 1 animatie">
+							<img src="/WebsiteProject/picture/animation2.png" alt="Afbeelding stap 2 animatie">
+						</div>
+						<div class="animationClip">
+							<video src="/WebsiteProject/video/clipanimations.mp4" autoplay loop muted></video>
+						</div>
+						<button class="fadebutup1"><img src="/WebsiteProject/picture/up-menu.png" class="fadeimg"
+								alt="arrow dropup"></button>
+					</div>
+					<div class="row2">
+						<div class="uitleg2">
+							<h2>Map</h2>
+							<p>Voor het maken van onze map maken we gebruik van een tileset. Deze werkt ongeveer
+								hetzelfde als het maken van een animatie. Je hebt een grote afbeelding waarop je een
+								raster kan maken. Dit raster zijn dan allemaal tegels die ge kan gebruiken om je map
+								vorm te geven. Je selectereerd één of meerdere tegels en vervolgens leg je deze als het
+								ware neer op je scherm. Om de fysieke effecten te doen loppen maken we gebruik van
+								layers. Deze layers zorgen ervoor dat je karakter voor of achter bepaalde objecten
+								wandeld. Als je dus wilt verdijwnen achter een muur zal je de layer van de muur boven de
+								layer van de speler plaatsen.</p>
+						</div>
+						<button class="fadebutdown2"><img src="/WebsiteProject/picture/down-menu.png" class="fadeimg"
+								alt="arrow dropdown"></button>
+					</div>
+					<div class="picSteps2">
+						<div class="animationImg2">
+							<img src="/WebsiteProject/picture/map1.png" alt="Afbeelding stap 1 map">
+							<img src="/WebsiteProject/picture/map2.png" alt="Afbeelding stap 2 map">
+						</div>
+						<div class="animationClip2">
+							<img src="/WebsiteProject/picture/map3.png" alt="Afbeelding stap 3 map">
+						</div>
+						<button class="fadebutup2"><img src="/WebsiteProject/picture/up-menu.png" class="fadeimg"
+								alt="arrow dropup"></button>
+					</div>
+				</div>
+			</div>
+			<footer class="foot">
+				<p class="copyright">Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer -
+					Professionele
+					bachelor elektronica-ict - 2024</p>
+			</footer>
+		</div>
+		<script src="/WebsiteProject/java/switchtheme.js"></script>
+		<script src="/WebsiteProject/java/assets.js"></script>
+	</div>
+</body>
+
+</html>
